@@ -8,4 +8,11 @@ function testNoteListView() {
   assert.isTrue(noteListView);
 };
 
+function testNoteListView2() {
+  var noteList = new NoteList
+  var nlv = new NoteListView(noteList)
+  assert.isTrue(nlv.getsNoteList() === noteList)
+};
+
 testNoteListView();
+testNoteListView2();
