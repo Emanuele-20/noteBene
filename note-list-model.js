@@ -8,9 +8,10 @@
       return this.notes
     }
 
-    //NoteList.prototype.addNote = function() {
-    //   new Note
-    // }
+    NoteList.prototype.addNote = function(text) {
+    var newNote = new Note(text); 
+    this.notes.push(newNote);
+    }
 
   exports.NoteList = NoteList;
 })(this);
