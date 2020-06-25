@@ -18,11 +18,28 @@ function testNoteListView3(){
   var noteList = new NoteList
   noteList.addNote('Favourite food: pesto')
   var nlv = new NoteListView(noteList)
-  // nlv.convertNote() === <ul><li><div>Favourite food: pesto</div></li>
-  assert.isTrue(nlv.convertNote() === "<ul><li><div>Favourite food: pesto</div></li>"
+  assert.isTrue(nlv.convertNote() === "<ul><li><div>Favourite food: pesto</div></li></ul>"
+)
+}
+
+function testNoteListView4(){
+  var noteList = new NoteList
+  var nlv = new NoteListView(noteList)
+  assert.isTrue(nlv.convertNote() === "<ul><li><div>No Notes</div></li></ul>"
+)
+}
+
+function testNoteListView5(){
+  var noteList = new NoteList
+  noteList.addNote('Favourite food: pesto')
+  noteList.addNote('Favourite food: pizza')
+  var nlv = new NoteListView(noteList)
+  assert.isTrue(nlv.convertNote() === "<ul><li><div>Favourite food: pesto</div></li></ul><ul><li><div>Favourite food: pizza</div></li></ul>"
 )
 }
 
 testNoteListView();
 testNoteListView2();
 testNoteListView3();
+testNoteListView4();
+testNoteListView5();
