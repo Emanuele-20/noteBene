@@ -14,5 +14,15 @@ function testNoteListView2() {
   assert.isTrue(nlv.getsNoteList() === noteList)
 };
 
+function testNoteListView3(){
+  var noteList = new NoteList
+  noteList.addNote('Favourite food: pesto')
+  var nlv = new NoteListView(noteList)
+  // nlv.convertNote() === <ul><li><div>Favourite food: pesto</div></li>
+  assert.isTrue(nlv.convertNote() === "<ul><li><div>Favourite food: pesto</div></li>"
+)
+}
+
 testNoteListView();
 testNoteListView2();
+testNoteListView3();
