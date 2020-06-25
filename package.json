@@ -1,0 +1,22 @@
+{
+  "name": "notebene",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emanuele-20/noteBene.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emanuele-20/noteBene/issues"
+  },
+  "homepage": "https://github.com/Emanuele-20/noteBene#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
