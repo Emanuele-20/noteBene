@@ -8,5 +8,9 @@
     return this.noteList
   };
 
+  NoteListView.prototype.convertNote() = funciton () {
+      this.noteList
+  }
+
   exports.NoteListView = NoteListView;
 })(this);
