@@ -15,7 +15,7 @@
       return `<ul><li><div>No Notes</div></li></ul>`
     } else {
       notes.forEach( note => {
-        array.push(`<ul><li><div>${note.showText()}</div></li></ul>`)
+        array.push(`<ul><li><div>${note.showText().substr(0, 20)}</div></li></ul>`)
       })
       return array.join("")
     }
@@ -23,3 +23,5 @@
 
   exports.NoteListView = NoteListView;
 })(this);
+
+// console.log(str.substr(1, 2));
