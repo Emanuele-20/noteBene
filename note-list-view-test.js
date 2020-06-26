@@ -18,7 +18,7 @@ function testNoteListView3(){
   var noteList = new NoteList
   noteList.addNote('Favourite food: pesto')
   var nlv = new NoteListView(noteList)
-  assert.isTrue(nlv.convertNote() === "<ul><li><div>Favourite food: pest</div></li></ul>"
+  assert.isTrue(nlv.convertNote() === "<ul><li><a href='#note/6'><div>Favourite food: pest</div></a></li></ul>"
 )
 }
 
@@ -34,7 +34,7 @@ function testNoteListView5(){
   noteList.addNote('Favourite food: pesto')
   noteList.addNote('Favourite food: pizza')
   var nlv = new NoteListView(noteList)
-  assert.isTrue(nlv.convertNote() === "<ul><li><div>Favourite food: pest</div></li></ul><ul><li><div>Favourite food: pizz</div></li></ul>"
+  assert.isTrue(nlv.convertNote() === "<ul><li><a href='#note/7'><div>Favourite food: pest</div></a></li></ul><ul><li><a href='#note/8'><div>Favourite food: pizz</div></a></li></ul>"
 )
 }
 
