@@ -10,5 +10,15 @@
         document.getElementById("app").innerHTML = html
     }
 
+    NoteController.prototype.makeUrlCHangeSHowNoteForCurrentPage = function() {
+        window.addEventListener("hashchange", showTextForCurrentPage());
+    }
+
+    NoteController.prototype.showTextForCurrentPage = function() {
+        showTextOnPage(getIdFromUrl(window.location));
+    }
+
+
+
     exports.NoteController = NoteController
 })(this)
